@@ -1,0 +1,36 @@
+
+.hero-section {
+    height: 70vh;
+    background: linear-gradient(292.12deg, #62BADA -35.02%, #C9E7F2 78.96%);
+    padding: 0 $master-margin;
+
+    .hero-wrapper {
+        width: 50%;
+        max-width: 500px;
+        padding: 100px 0;
+
+        .call-to-action-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 2em;
+            
+            .get-started-button {
+                background-color: $cta-blue;
+                color: $white;
+                padding: 0.5em 2em;
+                border-radius: 2em;
+            }
+            
+            .tutorial-button {
+                span {
+                    background-color: $cta-green;
+                    padding: 0.5em 1em;
+                    border-radius: 50%;
+                }
+                a {
+                    color: $cta-blue;
+                }
+            }
+        }
+    }
+}

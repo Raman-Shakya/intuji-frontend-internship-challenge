@@ -1,0 +1,16 @@
+$master-margin: 4em;
+$cta-blue: #3734A9;
+$cta-green: #22D497;
+$white: #FFFFFF;
+
+@import './header/_header.scss';
+
+* {
+    font-family: "Manrope", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

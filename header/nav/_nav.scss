@@ -1,0 +1,9 @@
+
+.main-nav-section {
+    position: fixed;
+    display: flex;
+    width: calc(100% - 2*$master-margin);
+    justify-content: space-between;
+    margin: 0 $master-margin;
+}
+

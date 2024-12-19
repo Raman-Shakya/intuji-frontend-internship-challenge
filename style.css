@@ -1,0 +1,46 @@
+.hero-section {
+  height: 70vh;
+  background: linear-gradient(292.12deg, #62BADA -35.02%, #C9E7F2 78.96%);
+  padding: 0 4em;
+}
+.hero-section .hero-wrapper {
+  width: 50%;
+  max-width: 500px;
+  padding: 100px 0;
+}
+.hero-section .hero-wrapper .call-to-action-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+.hero-section .hero-wrapper .call-to-action-wrapper .get-started-button {
+  background-color: #3734A9;
+  color: #FFFFFF;
+  padding: 0.5em 2em;
+  border-radius: 2em;
+}
+.hero-section .hero-wrapper .call-to-action-wrapper .tutorial-button span {
+  background-color: #22D497;
+  padding: 0.5em 1em;
+  border-radius: 50%;
+}
+.hero-section .hero-wrapper .call-to-action-wrapper .tutorial-button a {
+  color: #3734A9;
+}
+
+.main-nav-section {
+  position: fixed;
+  display: flex;
+  width: calc(100% - 8em);
+  justify-content: space-between;
+  margin: 0 4em;
+}
+
+* {
+  font-family: "Manrope", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}/*# sourceMappingURL=style.css.map */
