@@ -1,0 +1,15 @@
+
+.companies-section {
+    text-align: center;
+    background-color: $gray;
+    padding: 4em $master-margin;
+    font-size: 1.2em;
+
+    .companies-list {
+        display: flex;
+        justify-content: center;
+        gap: 3em;
+        overflow: auto;
+        margin: 1em 0;
+    }
+}

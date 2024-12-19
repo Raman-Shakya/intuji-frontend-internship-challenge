@@ -3,6 +3,7 @@ $cta-blue: #3734A9;
 $cta-green: #22D497;
 $white: #FFFFFF;
 $black: #000000;
+$gray: #F5F6F8;
 
 * {
     font-family: "Manrope", serif;
@@ -25,4 +26,5 @@ $black: #000000;
 }
 
 
-@import './header/_header.scss';
+@import './header/header';
+@import './main/main';

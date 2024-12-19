@@ -99,4 +99,18 @@
 .main-nav-section .main-nav-auth .start-free-button {
   color: #FFFFFF;
   background: #3734A9;
+}
+
+.companies-section {
+  text-align: center;
+  background-color: #F5F6F8;
+  padding: 4em 5em;
+  font-size: 1.2em;
+}
+.companies-section .companies-list {
+  display: flex;
+  justify-content: center;
+  gap: 3em;
+  overflow: auto;
+  margin: 1em 0;
 }/*# sourceMappingURL=style.css.map */
