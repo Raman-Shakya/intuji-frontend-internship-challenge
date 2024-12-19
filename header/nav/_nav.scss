@@ -5,5 +5,22 @@
     width: calc(100% - 2*$master-margin);
     justify-content: space-between;
     margin: 0 $master-margin;
+
+    top: 2em;
+    z-index: 10;
+
+    .main-nav-auth {
+        a {
+            text-decoration: none;
+            padding: 1em 2em;
+        }
+        .sign-in-button {
+            color: $black;
+        }
+        .start-free-button {
+            color: $white;
+            background: $cta-blue;
+        }
+    }
 }
 

@@ -1,7 +1,16 @@
+* {
+  font-family: "Manrope", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .hero-section {
-  height: 70vh;
-  background: linear-gradient(292.12deg, #62BADA -35.02%, #C9E7F2 78.96%);
-  padding: 0 4em;
+  height: 80vh;
+  padding: 0 5em;
+  position: relative;
 }
 .hero-section .hero-wrapper {
   width: 50%;
@@ -27,20 +36,67 @@
 .hero-section .hero-wrapper .call-to-action-wrapper .tutorial-button a {
   color: #3734A9;
 }
+.hero-section .hero-wrapper .features-list {
+  list-style-type: none;
+}
+.hero-section .hero-wrapper .features-list li::before {
+  content: url("../../assets/icons/checkmark-icon.svg");
+  display: inline-block;
+  background: #3734A9;
+  border-radius: 50%;
+  width: 1em;
+  height: 1em;
+}
+.hero-section .decorations {
+  background: linear-gradient(292.12deg, #62BADA -35.02%, #C9E7F2 78.96%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  z-index: -1;
+  bottom: 0;
+}
+.hero-section .decorations .hand-and-stamp {
+  width: 25%;
+  height: 70%;
+  position: absolute;
+  bottom: 0;
+  right: 20%;
+}
+.hero-section .decorations .hand-and-stamp img {
+  position: absolute;
+  height: 100%;
+  bottom: 0;
+}
+.hero-section .decorations .hand-and-stamp #left-hand {
+  left: 0%;
+}
+.hero-section .decorations .hand-and-stamp #right-hand {
+  right: 0%;
+  bottom: 0em;
+}
+.hero-section .decorations .hand-and-stamp #stamp {
+  height: 60%;
+  top: 0;
+}
 
 .main-nav-section {
   position: fixed;
   display: flex;
-  width: calc(100% - 8em);
+  width: calc(100% - 10em);
   justify-content: space-between;
-  margin: 0 4em;
+  margin: 0 5em;
+  top: 2em;
+  z-index: 10;
 }
-
-* {
-  font-family: "Manrope", serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.main-nav-section .main-nav-auth a {
+  text-decoration: none;
+  padding: 1em 2em;
+}
+.main-nav-section .main-nav-auth .sign-in-button {
+  color: #000000;
+}
+.main-nav-section .main-nav-auth .start-free-button {
+  color: #FFFFFF;
+  background: #3734A9;
 }/*# sourceMappingURL=style.css.map */
