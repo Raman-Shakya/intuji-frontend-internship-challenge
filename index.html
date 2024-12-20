@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AR SHAKIR</title>
     <!-- loading fonts (Google fonts) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,6 +11,9 @@
 
     <!-- SCSS Compiled style linking -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -20,10 +23,10 @@
                 <h1>AR SHAKIR</h1>
             </div>
             <div class="main-nav-links">
-                Product v
-                Template v
-                Blog
-                Pricing    
+                <span>Product <img src="./assets/icons/dropdown-icon.svg" alt="dropdown"></span>
+                <span>Template <img src="./assets/icons/dropdown-icon.svg" alt="dropdown"></span>
+                <span>Blog</span>
+                <span>Pricing</span>
             </div>
             <div class="main-nav-auth">
                 <a href="#" class="sign-in-button">Sign In</a>
@@ -32,17 +35,15 @@
         </nav>
 
         <section class="hero-section">
-            <div class="decorations">
-                <div class="hand-and-stamp">
-                    <img id="stamp" src="./assets/header/hero-stamp.png" alt="stamp"/>
-                    <img id="right-hand" src="./assets/header/hero-hand-right.png" alt="right-hand"/>
-                    <img id="left-hand" src="./assets/header/hero-hand-left.png" alt="left-hand"/>
-                </div>
+            <div class="doodle-container">
+                <img class="doodle-1" src="./assets/header/brush-pattern.svg" alt="brush"/>
+                <img class="doodle-2" src="./assets/header/dot-pattern.svg" alt="dot"/>
+                <img class="doodle-3" src="./assets/header/x-pattern.svg" alt="x-pattern"/>
             </div>
-
-            <section class="hero-wrapper">
-                <h1>Managing freelance payments has never been easier</h1>
-                <p>Yet bed any for travelling assistance indulgence unpleasing. Not thoughts all exercise blessing.</p>
+            
+            <div class="hero-wrapper">
+                <h1>Managing freelance<br>payments has never<br>been easier</h1>
+                <p>Yet bed any for travelling assistance indulgence<br>unpleasing. Not thoughts all exercise blessing.</p>
                 
                 <div class="call-to-action-wrapper">
                     <div class="get-started-button">
@@ -58,7 +59,20 @@
                     <li>Free Register</li>
                     <li>Great Service</li>
                 </section>
-            </section>
+            </div>
+
+            <div class="decorations">
+                <div class="hand-and-stamp">
+                    <img id="stamp-border" src="./assets/header/hero-stamp.png" alt="stamp-border"/>
+                    <img id="stamp-cover" src="./assets/header/stamp-cover.svg" alt="stamp-cover"/>
+                    <img id="stamp-logo" src="./assets/header/stamp-logo.svg" alt="stamp-logo"/>
+                    <img id="doodle" src="./assets/header/slash-pattern.png" alt="stamp-logo"/>
+
+                    <img id="right-hand" src="./assets/header/hero-hand-right.png" alt="right-hand"/>
+                    <img id="left-hand" src="./assets/header/hero-hand-left.png" alt="left-hand"/>
+                </div>
+
+            </div>
         </section>
     </header>
     <main>
@@ -348,5 +362,8 @@
             Copyright @ AR Shakir 2022. All Rights Reserved.
         </div>
     </footer>
+
+    <!-- JS SCRIPTS -->
+    <script src="./header/header.js"></script>
 </body>
 </html>

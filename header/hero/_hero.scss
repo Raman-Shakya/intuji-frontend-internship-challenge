@@ -1,31 +1,88 @@
 
 .hero-section {
-    height: 80vh;
+    height: 85vh;
     padding: 0 $master-margin;
     position: relative;
+    display: flex;
+    overflow: hidden;
+    // align-items: center;
 
     .hero-wrapper {
+        flex: 1;
         width: 50%;
-        max-width: 500px;
-        padding: 100px 0;
+        padding: 120px 0 50px;
+        margin: auto;
+
+        h1 {
+            font-size: 53px;
+            line-height: 1.2em;
+        }
+        p {
+            margin: 1em 0;
+        }
 
         .call-to-action-wrapper {
             display: flex;
             align-items: center;
-            gap: 2em;
+            gap: 2.5em;
+            margin: 2em 0;
             
             .get-started-button {
                 background-color: $cta-blue;
                 color: $white;
-                padding: 0.5em 2em;
-                border-radius: 2em;
+                padding: 1em 2em;
+                border-radius: 1.5em;
+                cursor: pointer;
+                transition: background-color $animation-time;
+
+                &:hover {
+                    background-color: $cta-blue-selected;
+                }
             }
             
             .tutorial-button {
-                span {
+                display: flex;
+                align-items: center;
+                gap: 0.5em;
+                position: relative;
+                cursor: pointer;
+
+                &::after {
+                    content: '';
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: $animation-time;
+                    position: absolute;
+                    left: 0;
+                    width: 0;
+                    height: 3em;
+                    width: 3em;
                     background-color: $cta-green;
-                    padding: 0.5em 1em;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    color: $white;
+                    opacity: 0;
+                }
+
+                &:hover::after {
+                    content: "See How it Works";
+                    width: 100%;
+                    opacity: 1;
+                    border-radius: 20px;
+                }
+
+                span {
+                    width: 3em;
+                    height: 3em;
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
                     border-radius: 50%;
+                    background-color: $cta-green;
+                    
+                    img { height: 50%; }
+
                 }
                 a {
                     color: $cta-blue;
@@ -34,45 +91,84 @@
         }
 
         .features-list {
-            list-style-type: none;
-            li::before {
+            display: flex;
+            gap: 2em;
+            li {
                 @include checkmark();
             }
         }
     }
 
     .decorations {
-        background: linear-gradient(292.12deg, #62BADA -35.02%, #C9E7F2 78.96%);
-        position: absolute;
-        width: 100%;
-        height:100%;
-        left: 0;
-        z-index: -1;
-        bottom: 0;
+        flex: 1;
 
         .hand-and-stamp {
-            width: 25%;
-            height: 70%;
-            position: absolute;
-            bottom: 0;
-            right: 20%;
+            position: relative;
+            height: 100%;
+            aspect-ratio: 1/2;
 
-            img {
+            * {
                 position: absolute;
-                height: 100%;
-                bottom: 0;
             }
             #left-hand {
-                left: 0%;
+                height: 100%;
+                left: 0;
+                bottom: -15%;
             }
             #right-hand {
-                right: 0%;
-                bottom: 0em;
+                height: 90%;
+                left: 17%;
+                bottom: -18%;
             }
-            #stamp {
-                height: 60%;
-                top: 0;
+            #stamp-border {
+                height: 45%;
+                top: 5%;
+                left: 23%;
             }
+            #stamp-cover {
+                height: 17%;
+                top: 19%;
+                left: 51%;
+            }
+            #stamp-logo {
+                height: 9%;
+                top: 23%;
+                left: 58%;
+            }
+            #doodle {
+                height: 15%;
+                top: 65%;
+                left: 50%;
+            }
+        }
+    }
+
+    .doodle-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(292.12deg, #62BADA -35.02%, #C9E7F2 78.96%);
+        z-index: -1;
+
+        img {
+            position: absolute;
+        }
+        .doodle-1 {
+            height: 50%;
+            right: 0;
+            bottom: -15%;
+        }
+        .doodle-2 {
+            height: 17%;
+            left: 0;
+            bottom: 10%;
+        }
+        .doodle-3 {
+            height: 17%;
+            right: 0;
+            top: 15%;
         }
     }
 }

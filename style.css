@@ -12,41 +12,95 @@ body {
 }
 
 .hero-section {
-  height: 80vh;
+  height: 85vh;
   padding: 0 7%;
   position: relative;
+  display: flex;
+  overflow: hidden;
 }
 .hero-section .hero-wrapper {
+  flex: 1;
   width: 50%;
-  max-width: 500px;
-  padding: 100px 0;
+  padding: 120px 0 50px;
+  margin: auto;
+}
+.hero-section .hero-wrapper h1 {
+  font-size: 53px;
+  line-height: 1.2em;
+}
+.hero-section .hero-wrapper p {
+  margin: 1em 0;
 }
 .hero-section .hero-wrapper .call-to-action-wrapper {
   display: flex;
   align-items: center;
-  gap: 2em;
+  gap: 2.5em;
+  margin: 2em 0;
 }
 .hero-section .hero-wrapper .call-to-action-wrapper .get-started-button {
   background-color: #3734A9;
   color: #FFFFFF;
-  padding: 0.5em 2em;
-  border-radius: 2em;
+  padding: 1em 2em;
+  border-radius: 1.5em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.hero-section .hero-wrapper .call-to-action-wrapper .get-started-button:hover {
+  background-color: #4f4bf5;
+}
+.hero-section .hero-wrapper .call-to-action-wrapper .tutorial-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  position: relative;
+  cursor: pointer;
+}
+.hero-section .hero-wrapper .call-to-action-wrapper .tutorial-button::after {
+  content: "";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 3em;
+  width: 3em;
+  background-color: #22D497;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #FFFFFF;
+  opacity: 0;
+}
+.hero-section .hero-wrapper .call-to-action-wrapper .tutorial-button:hover::after {
+  content: "See How it Works";
+  width: 100%;
+  opacity: 1;
+  border-radius: 20px;
 }
 .hero-section .hero-wrapper .call-to-action-wrapper .tutorial-button span {
-  background-color: #22D497;
-  padding: 0.5em 1em;
+  width: 3em;
+  height: 3em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
+  background-color: #22D497;
+}
+.hero-section .hero-wrapper .call-to-action-wrapper .tutorial-button span img {
+  height: 50%;
 }
 .hero-section .hero-wrapper .call-to-action-wrapper .tutorial-button a {
   color: #3734A9;
 }
 .hero-section .hero-wrapper .features-list {
+  display: flex;
+  gap: 2em;
+}
+.hero-section .hero-wrapper .features-list li {
   list-style-type: none;
 }
 .hero-section .hero-wrapper .features-list li::before {
-  list-style-type: none;
-}
-.hero-section .hero-wrapper .features-list li::before::before {
   content: url("../../assets/icons/checkmark-icon.svg");
   display: inline-flex;
   background: #3734A9;
@@ -58,46 +112,103 @@ body {
   margin-right: 0.5em;
 }
 .hero-section .decorations {
-  background: linear-gradient(292.12deg, #62BADA -35.02%, #C9E7F2 78.96%);
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  z-index: -1;
-  bottom: 0;
+  flex: 1;
 }
 .hero-section .decorations .hand-and-stamp {
-  width: 25%;
-  height: 70%;
-  position: absolute;
-  bottom: 0;
-  right: 20%;
-}
-.hero-section .decorations .hand-and-stamp img {
-  position: absolute;
+  position: relative;
   height: 100%;
-  bottom: 0;
+  aspect-ratio: 1/2;
+}
+.hero-section .decorations .hand-and-stamp * {
+  position: absolute;
 }
 .hero-section .decorations .hand-and-stamp #left-hand {
-  left: 0%;
+  height: 100%;
+  left: 0;
+  bottom: -15%;
 }
 .hero-section .decorations .hand-and-stamp #right-hand {
-  right: 0%;
-  bottom: 0em;
+  height: 90%;
+  left: 17%;
+  bottom: -18%;
 }
-.hero-section .decorations .hand-and-stamp #stamp {
-  height: 60%;
+.hero-section .decorations .hand-and-stamp #stamp-border {
+  height: 45%;
+  top: 5%;
+  left: 23%;
+}
+.hero-section .decorations .hand-and-stamp #stamp-cover {
+  height: 17%;
+  top: 19%;
+  left: 51%;
+}
+.hero-section .decorations .hand-and-stamp #stamp-logo {
+  height: 9%;
+  top: 23%;
+  left: 58%;
+}
+.hero-section .decorations .hand-and-stamp #doodle {
+  height: 15%;
+  top: 65%;
+  left: 50%;
+}
+.hero-section .doodle-container {
+  position: absolute;
   top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(292.12deg, #62BADA -35.02%, #C9E7F2 78.96%);
+  z-index: -1;
+}
+.hero-section .doodle-container img {
+  position: absolute;
+}
+.hero-section .doodle-container .doodle-1 {
+  height: 50%;
+  right: 0;
+  bottom: -15%;
+}
+.hero-section .doodle-container .doodle-2 {
+  height: 17%;
+  left: 0;
+  bottom: 10%;
+}
+.hero-section .doodle-container .doodle-3 {
+  height: 17%;
+  right: 0;
+  top: 15%;
 }
 
 .main-nav-section {
   position: fixed;
   display: flex;
-  width: 86%;
+  width: 100%;
+  padding: 2em 7%;
   justify-content: space-between;
-  margin: 0 7%;
-  top: 2em;
   z-index: 10;
+}
+.main-nav-section h1 {
+  cursor: pointer;
+}
+.main-nav-section .main-nav-links {
+  display: flex;
+  gap: 1em;
+}
+.main-nav-section .main-nav-links span {
+  cursor: pointer;
+}
+.main-nav-section .main-nav-links span::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  margin: auto;
+  background-color: black;
+  transition: 0.3s;
+}
+.main-nav-section .main-nav-links span:hover::after {
+  width: 90%;
 }
 .main-nav-section .main-nav-auth a {
   text-decoration: none;
@@ -105,10 +216,18 @@ body {
 }
 .main-nav-section .main-nav-auth .sign-in-button {
   color: #000000;
+  transition: background-color 0.3s;
+}
+.main-nav-section .main-nav-auth .sign-in-button:hover {
+  background-color: #F5F6F8;
 }
 .main-nav-section .main-nav-auth .start-free-button {
   color: #FFFFFF;
-  background: #3734A9;
+  background-color: #3734A9;
+  transition: background-color 0.3s;
+}
+.main-nav-section .main-nav-auth .start-free-button:hover {
+  background-color: #4f4bf5;
 }
 
 .companies-section {

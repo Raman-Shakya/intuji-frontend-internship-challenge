@@ -2,12 +2,39 @@
 .main-nav-section {
     position: fixed;
     display: flex;
-    width: calc(100% - 2*$master-margin);
+    // width: calc(100% - 2*$master-margin);
+    width: 100%;
+    padding: 2em $master-margin;
     justify-content: space-between;
-    margin: 0 $master-margin;
+    // margin: 0 $master-margin;
 
-    top: 2em;
     z-index: 10;
+
+    h1 {
+        cursor: pointer;
+    }
+
+    .main-nav-links {
+        display: flex;
+        gap: 1em;
+
+        span {
+            cursor: pointer;
+
+            &::after {
+                content: '';
+                display: block;
+                width: 0;
+                height: 1px;
+                margin: auto;
+                background-color: black;
+                transition: $animation-time;
+            }
+            &:hover::after {
+                width: 90%;
+            }
+        }
+    }
 
     .main-nav-auth {
         a {
@@ -16,10 +43,19 @@
         }
         .sign-in-button {
             color: $black;
+            transition: background-color $animation-time;
+            &:hover {
+                background-color: $gray;
+            }
         }
         .start-free-button {
             color: $white;
-            background: $cta-blue;
+            background-color: $cta-blue;
+            transition: background-color $animation-time;
+
+            &:hover {
+                background-color: $cta-blue-selected;
+            }
         }
     }
 }
