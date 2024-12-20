@@ -1,0 +1,36 @@
+
+.testimonials {
+    margin: 50px $master-margin;
+
+    h2 {
+        font-size: 50px;
+    }
+
+    .testimonial-wrapper {
+        display: flex;
+        gap: 1em;
+        margin: 50px 0;
+
+        .testimonial-card {
+            display: flex;
+            @include testimonial();
+            flex-direction: row;
+            width: fit-content;
+            height: 300px;
+            background-color: $white;
+            border: 1px solid $dark-gray;
+
+            .testimonial-script {
+                font-size: 1.1em;
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+            }
+            img {
+                height: 100%;
+                width: 150px;
+                object-fit: cover;
+            }
+        }
+    }
+}
