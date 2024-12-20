@@ -420,4 +420,82 @@ body {
 }
 .recent-blog-section .more-blog .blog img {
   width: 100%;
+}
+
+.faq-section {
+  margin: 3em 10%;
+}
+.faq-section h2 {
+  font-size: 50px;
+}
+.faq-section .faq-wrapper {
+  display: flex;
+  gap: 3em;
+}
+.faq-section .faq-wrapper .faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  flex: 3;
+}
+.faq-section .faq-wrapper .faq-list .faq {
+  border: 1px solid #C4C4C4;
+  border-radius: 10px;
+  padding: 1em 1.5em;
+}
+.faq-section .faq-wrapper .faq-list .faq p {
+  margin: 10px 0;
+  display: none;
+}
+.faq-section .faq-wrapper .faq-list .faq h3 {
+  display: flex;
+  justify-content: space-between;
+}
+.faq-section .faq-wrapper .faq-list .faq h3::after {
+  content: "+";
+  font-size: 25px;
+}
+.faq-section .faq-wrapper .more-qns {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  gap: 1em;
+  border: 1px solid #C4C4C4;
+  border-radius: 10px;
+  padding: 3em 2em 1em;
+}
+.faq-section .faq-wrapper .more-qns h3 {
+  margin: 1em 0;
+}
+.faq-section .faq-wrapper .more-qns button {
+  background: #FF7F5C;
+  width: 100%;
+  color: #FFFFFF;
+  border: none;
+  font-size: 16px;
+  height: 4em;
+}
+
+.cta-section {
+  background-color: #3734A9;
+  color: #FFFFFF;
+  text-align: center;
+  margin: 2em 10%;
+  padding: 5em;
+  border-radius: 2em;
+}
+.cta-section h2 {
+  font-size: 50px;
+}
+.cta-section button {
+  background: #FF7F5C;
+  color: #FFFFFF;
+  border: none;
+  font-size: 16px;
+  height: 4em;
+  padding: 0 3em;
+  margin-top: 20px;
+  border-radius: 0.75em;
 }/*# sourceMappingURL=style.css.map */
