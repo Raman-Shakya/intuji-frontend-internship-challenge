@@ -290,18 +290,18 @@ body {
   gap: 1.5em;
 }
 
-.testimonials {
+.testimonial-section {
   margin: 50px 10%;
 }
-.testimonials h2 {
+.testimonial-section h2 {
   font-size: 50px;
 }
-.testimonials .testimonial-wrapper {
+.testimonial-section .testimonial-wrapper {
   display: flex;
-  gap: 1em;
+  gap: 2em;
   margin: 50px 0;
 }
-.testimonials .testimonial-wrapper .testimonial-card {
+.testimonial-section .testimonial-wrapper .testimonial-card {
   display: flex;
   display: flex;
   flex-direction: column;
@@ -318,7 +318,7 @@ body {
   background-color: #FFFFFF;
   border: 1px solid #C4C4C4;
 }
-.testimonials .testimonial-wrapper .testimonial-card::before {
+.testimonial-section .testimonial-wrapper .testimonial-card::before {
   content: url("./assets/icons/quotes.svg");
   background: black;
   display: inline-flex;
@@ -331,15 +331,93 @@ body {
   top: -1.3em;
   left: 2em;
 }
-.testimonials .testimonial-wrapper .testimonial-card .testimonial-script {
+.testimonial-section .testimonial-wrapper .testimonial-card .testimonial-script {
   font-size: 1.1em;
   display: flex;
   flex-direction: column;
   gap: 1em;
 }
-.testimonials .testimonial-wrapper .testimonial-card img {
+.testimonial-section .testimonial-wrapper .testimonial-card img {
   height: 100%;
   width: 150px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.statistic-section {
+  background-color: #3734A9;
+  color: #FFFFFF;
+  padding: 0 10%;
+  display: flex;
+  margin: 2em 0;
+}
+.statistic-section .statistic-label {
+  display: flex;
+  align-items: center;
+  padding-right: 2em;
+  width: 10em;
+  border-right: 2px solid gray;
+}
+.statistic-section .statistic-label h2 {
+  font-size: 14px;
+  font-weight: normal;
+}
+.statistic-section .statistics-container {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 4em;
+  width: 100%;
+  padding: 30px 0;
+}
+.statistic-section .statistics-container article h3 {
+  font-size: 70px;
+}
+.statistic-section .statistics-container article p {
+  font-size: 25px;
+}
+
+.recent-blog-section {
+  margin: 0 10%;
+}
+.recent-blog-section h2 {
+  font-size: 50px;
+}
+.recent-blog-section .blog {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  border: 1px solid #F5F6F8;
+  border-radius: 10px;
+  margin: 0.75em 0;
+  position: relative;
+  overflow: hidden;
+}
+.recent-blog-section .blog::before {
+  content: "BEST PRACTICES";
+  position: absolute;
+  left: 2rem;
+  top: 2rem;
+}
+.recent-blog-section .blog h3 {
+  font-size: 25px;
+  margin: 4rem 2rem;
+}
+.recent-blog-section .blog p {
+  margin-left: 3em;
+}
+.recent-blog-section .blog img {
+  width: 100%;
+}
+.recent-blog-section .featured-blog img {
+  height: 100%;
+}
+.recent-blog-section .more-blog {
+  display: flex;
+  gap: 1.5em;
+}
+.recent-blog-section .more-blog .blog {
+  flex-direction: column;
+}
+.recent-blog-section .more-blog .blog img {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

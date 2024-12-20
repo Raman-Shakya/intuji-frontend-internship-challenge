@@ -1,0 +1,36 @@
+
+.statistic-section {
+    background-color: $cta-blue;
+    color: $white;
+    padding: 0 $master-margin;
+    display: flex;
+    margin: 2em 0;
+
+    .statistic-label {
+        display: flex;
+        align-items: center;
+        padding-right: 2em;
+        width: 10em;
+        border-right: 2px solid gray;
+        
+        h2 {
+            font-size: 14px;
+            font-weight: normal;
+        }
+    }
+
+    .statistics-container {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 4em;
+        width: 100%;
+        padding: 30px 0;
+
+        article h3 {
+            font-size: 70px;
+        }
+        article p {
+            font-size: 25px;
+        }
+    }
+}

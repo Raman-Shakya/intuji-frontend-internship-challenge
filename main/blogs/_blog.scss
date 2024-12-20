@@ -1,0 +1,53 @@
+
+.recent-blog-section {
+    margin: 0 $master-margin;
+    h2 {
+        font-size: 50px;
+    }
+
+    .blog {
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+        border: 1px solid $gray;
+        border-radius: 10px;
+        margin: 0.75em 0;
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: 'BEST PRACTICES';
+            position: absolute;
+            left: 2rem;
+            top: 2rem;
+        }
+
+        h3 {
+            font-size: 25px;
+            margin: 4rem 2rem;
+        }
+        p {
+            margin-left: 3em;
+        }
+        img {
+            // height: 100%;
+            width: 100%;
+        }
+    }
+
+    .featured-blog img {
+        height: 100%;
+    }
+
+    .more-blog {
+        display: flex;
+        gap: 1.5em;
+
+        .blog {
+            flex-direction: column;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
