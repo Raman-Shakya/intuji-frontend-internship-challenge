@@ -1,0 +1,53 @@
+
+.footer {
+    margin: 4em $master-margin 2em;
+
+    .footer-wrapper {
+        display: flex;
+        gap: 1em;
+        padding: 2em;
+
+        h2 {
+            margin-bottom: 20px;
+        }
+        p {
+            color: $text-gray;
+            margin: 10px 0;
+        }
+        a {
+            display: block;
+            margin: 10px 0;
+            color: $text-gray;
+        }
+
+        article {
+            flex: 1;
+        }
+
+        .newsletter form {
+            display: flex;
+            margin: 10px 0;
+
+            .newsletter-email {
+                background-color: $gray;
+                flex: 1;
+                border: none;
+                padding: 1em;
+            }
+
+            .newsletter-subscribe {
+                border: none;
+                background-color: $cta-blue;
+                color: $white;
+                padding: 1em 2em;
+            }
+        }
+    }
+
+
+    .copyright {
+        text-align: center;
+        border-top: 1px solid $dark-gray; 
+        padding-top: 2em;
+    }
+}

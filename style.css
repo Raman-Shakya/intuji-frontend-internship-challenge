@@ -13,7 +13,7 @@ body {
 
 .hero-section {
   height: 80vh;
-  padding: 0 10%;
+  padding: 0 7%;
   position: relative;
 }
 .hero-section .hero-wrapper {
@@ -93,9 +93,9 @@ body {
 .main-nav-section {
   position: fixed;
   display: flex;
-  width: 80%;
+  width: 86%;
   justify-content: space-between;
-  margin: 0 10%;
+  margin: 0 7%;
   top: 2em;
   z-index: 10;
 }
@@ -114,7 +114,7 @@ body {
 .companies-section {
   text-align: center;
   background-color: #F5F6F8;
-  padding: 4em 10%;
+  padding: 4em 7%;
   font-size: 1.2em;
 }
 .companies-section .companies-list {
@@ -129,7 +129,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 10%;
+  margin: 7%;
 }
 .services-section .services-heading .service-introduction {
   width: 40%;
@@ -163,7 +163,7 @@ body {
 .services-section .service-value-prop {
   display: flex;
   justify-content: space-between;
-  margin: 10%;
+  margin: 7%;
   gap: 3em;
 }
 .services-section .service-value-prop .service-value {
@@ -194,7 +194,7 @@ body {
 }
 .services-section .unique-selling-point {
   display: flex;
-  margin: 10%;
+  margin: 7%;
   justify-content: space-between;
   align-items: center;
 }
@@ -258,7 +258,7 @@ body {
 
 .features-section {
   background: #C9E7F2;
-  padding: 3em 10%;
+  padding: 3em 7%;
 }
 .features-section h2 {
   font-size: 50px;
@@ -291,7 +291,7 @@ body {
 }
 
 .testimonial-section {
-  margin: 50px 10%;
+  margin: 50px 7%;
 }
 .testimonial-section h2 {
   font-size: 50px;
@@ -347,7 +347,7 @@ body {
 .statistic-section {
   background-color: #3734A9;
   color: #FFFFFF;
-  padding: 0 10%;
+  padding: 0 7%;
   display: flex;
   margin: 2em 0;
 }
@@ -377,7 +377,7 @@ body {
 }
 
 .recent-blog-section {
-  margin: 0 10%;
+  margin: 0 7%;
 }
 .recent-blog-section h2 {
   font-size: 50px;
@@ -423,7 +423,7 @@ body {
 }
 
 .faq-section {
-  margin: 3em 10%;
+  margin: 3em 7%;
 }
 .faq-section h2 {
   font-size: 50px;
@@ -482,7 +482,7 @@ body {
   background-color: #3734A9;
   color: #FFFFFF;
   text-align: center;
-  margin: 2em 10%;
+  margin: 2em 7%;
   padding: 5em;
   border-radius: 2em;
 }
@@ -498,4 +498,49 @@ body {
   padding: 0 3em;
   margin-top: 20px;
   border-radius: 0.75em;
+}
+
+.footer {
+  margin: 4em 7% 2em;
+}
+.footer .footer-wrapper {
+  display: flex;
+  gap: 1em;
+  padding: 2em;
+}
+.footer .footer-wrapper h2 {
+  margin-bottom: 20px;
+}
+.footer .footer-wrapper p {
+  color: #64607D;
+  margin: 10px 0;
+}
+.footer .footer-wrapper a {
+  display: block;
+  margin: 10px 0;
+  color: #64607D;
+}
+.footer .footer-wrapper article {
+  flex: 1;
+}
+.footer .footer-wrapper .newsletter form {
+  display: flex;
+  margin: 10px 0;
+}
+.footer .footer-wrapper .newsletter form .newsletter-email {
+  background-color: #F5F6F8;
+  flex: 1;
+  border: none;
+  padding: 1em;
+}
+.footer .footer-wrapper .newsletter form .newsletter-subscribe {
+  border: none;
+  background-color: #3734A9;
+  color: #FFFFFF;
+  padding: 1em 2em;
+}
+.footer .copyright {
+  text-align: center;
+  border-top: 1px solid #C4C4C4;
+  padding-top: 2em;
 }/*# sourceMappingURL=style.css.map */
