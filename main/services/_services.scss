@@ -1,0 +1,89 @@
+.services-section {
+    .services-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: $master-margin;
+
+        .service-introduction {
+            width: 40%;
+            h2 {
+                font-size: 56px;
+            }
+        }
+
+        .service-testimonial {
+            @include testimonial();
+        }
+    }
+
+
+    .service-value-prop {
+        display: flex;
+        justify-content: space-between;
+        margin: $master-margin;
+        gap: 3em;
+        
+        .service-value {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            background-color: $white;
+            min-height: 200px;
+            padding: 2em 4em;
+            gap: 1em;
+            border: 1px solid #DBE4E9;
+            border-radius: 16px;
+            position: relative;
+    
+            span {
+                position: absolute;
+                font-size: 20px;
+                font-weight: bold;
+                top: 10px;
+                left: 10px;
+            }
+            img {
+                width: 0 40px;
+                margin: 2em auto;
+            }
+            h3 {
+                font-size: 25px;
+            }
+        }
+    }
+
+    .unique-selling-point {
+        display: flex;
+        margin: $master-margin;
+        justify-content: space-between;
+        align-items: center;
+
+        article {
+            width: 50%;
+        }
+        .overline-header {
+            color: $cta-blue;
+        }
+        .selling-point-header {
+            font-size: 50px;
+        }
+        .selling-point-description {
+            color: $text-gray;
+            margin: 2em 0 1em;
+        }
+        .selling-point-features {
+            margin: 1em 0;
+        }
+        .selling-point-features li{
+            margin: 0.5em 0;            
+            @include checkmark();
+            &::before {
+                background: $yellow;
+            }
+        }
+        .service-testimonial {
+            @include testimonial();
+        }
+    }
+}

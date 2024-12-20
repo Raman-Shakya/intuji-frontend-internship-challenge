@@ -7,9 +7,13 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #FAFBFF;
+}
+
 .hero-section {
   height: 80vh;
-  padding: 0 5em;
+  padding: 0 10%;
   position: relative;
 }
 .hero-section .hero-wrapper {
@@ -40,12 +44,18 @@
   list-style-type: none;
 }
 .hero-section .hero-wrapper .features-list li::before {
+  list-style-type: none;
+}
+.hero-section .hero-wrapper .features-list li::before::before {
   content: url("../../assets/icons/checkmark-icon.svg");
-  display: inline-block;
+  display: inline-flex;
   background: #3734A9;
   border-radius: 50%;
-  width: 1em;
-  height: 1em;
+  width: 1.3em;
+  height: 1.3em;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.5em;
 }
 .hero-section .decorations {
   background: linear-gradient(292.12deg, #62BADA -35.02%, #C9E7F2 78.96%);
@@ -83,9 +93,9 @@
 .main-nav-section {
   position: fixed;
   display: flex;
-  width: calc(100% - 10em);
+  width: 80%;
   justify-content: space-between;
-  margin: 0 5em;
+  margin: 0 10%;
   top: 2em;
   z-index: 10;
 }
@@ -104,7 +114,7 @@
 .companies-section {
   text-align: center;
   background-color: #F5F6F8;
-  padding: 4em 5em;
+  padding: 4em 10%;
   font-size: 1.2em;
 }
 .companies-section .companies-list {
@@ -113,4 +123,135 @@
   gap: 3em;
   overflow: auto;
   margin: 1em 0;
+}
+
+.services-section .services-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10%;
+}
+.services-section .services-heading .service-introduction {
+  width: 40%;
+}
+.services-section .services-heading .service-introduction h2 {
+  font-size: 56px;
+}
+.services-section .services-heading .service-testimonial {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  background-color: #C4C4C4;
+  width: 400px;
+  padding: 3em 2em 2em;
+  border-radius: 20px;
+  position: relative;
+}
+.services-section .services-heading .service-testimonial::before {
+  content: url("./assets/icons/quotes.svg");
+  background: black;
+  display: inline-flex;
+  position: absolute;
+  width: 3em;
+  height: 3em;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  top: -1.3em;
+  left: 2em;
+}
+.services-section .service-value-prop {
+  display: flex;
+  justify-content: space-between;
+  margin: 10%;
+  gap: 3em;
+}
+.services-section .service-value-prop .service-value {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #FFFFFF;
+  min-height: 200px;
+  padding: 2em 4em;
+  gap: 1em;
+  border: 1px solid #DBE4E9;
+  border-radius: 16px;
+  position: relative;
+}
+.services-section .service-value-prop .service-value span {
+  position: absolute;
+  font-size: 20px;
+  font-weight: bold;
+  top: 10px;
+  left: 10px;
+}
+.services-section .service-value-prop .service-value img {
+  width: 0 40px;
+  margin: 2em auto;
+}
+.services-section .service-value-prop .service-value h3 {
+  font-size: 25px;
+}
+.services-section .unique-selling-point {
+  display: flex;
+  margin: 10%;
+  justify-content: space-between;
+  align-items: center;
+}
+.services-section .unique-selling-point article {
+  width: 50%;
+}
+.services-section .unique-selling-point .overline-header {
+  color: #3734A9;
+}
+.services-section .unique-selling-point .selling-point-header {
+  font-size: 50px;
+}
+.services-section .unique-selling-point .selling-point-description {
+  color: #64607D;
+  margin: 2em 0 1em;
+}
+.services-section .unique-selling-point .selling-point-features {
+  margin: 1em 0;
+}
+.services-section .unique-selling-point .selling-point-features li {
+  margin: 0.5em 0;
+  list-style-type: none;
+}
+.services-section .unique-selling-point .selling-point-features li::before {
+  content: url("../../assets/icons/checkmark-icon.svg");
+  display: inline-flex;
+  background: #3734A9;
+  border-radius: 50%;
+  width: 1.3em;
+  height: 1.3em;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.5em;
+}
+.services-section .unique-selling-point .selling-point-features li::before {
+  background: #FDBC64;
+}
+.services-section .unique-selling-point .service-testimonial {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  background-color: #C4C4C4;
+  width: 400px;
+  padding: 3em 2em 2em;
+  border-radius: 20px;
+  position: relative;
+}
+.services-section .unique-selling-point .service-testimonial::before {
+  content: url("./assets/icons/quotes.svg");
+  background: black;
+  display: inline-flex;
+  position: absolute;
+  width: 3em;
+  height: 3em;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  top: -1.3em;
+  left: 2em;
 }/*# sourceMappingURL=style.css.map */

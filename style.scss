@@ -1,9 +1,13 @@
-$master-margin: 5em;
+$master-margin: calc(10%);
 $cta-blue: #3734A9;
 $cta-green: #22D497;
 $white: #FFFFFF;
 $black: #000000;
+$text-gray: #64607D;
 $gray: #F5F6F8;
+$dark-gray: #C4C4C4;
+$bg-white: #FAFBFF;
+$yellow: #FDBC64;
 
 * {
     font-family: "Manrope", serif;
@@ -15,14 +19,47 @@ $gray: #F5F6F8;
     box-sizing: border-box;
 }
 
-@mixin checkmark {
-    content: url('../../assets/icons/checkmark-icon.svg');
-    display: inline-block;
-    background: $cta-blue;
-    border-radius: 50%;
-    width: 1em;
-    height: 1em;
+body {
+    background-color: $bg-white;
+}
 
+@mixin checkmark {
+    &::before {
+        content: url('../../assets/icons/checkmark-icon.svg');
+        display: inline-flex;
+        background: $cta-blue;
+        border-radius: 50%;
+        width: 1.3em;
+        height: 1.3em;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0.5em;
+    }
+    list-style-type: none;
+}
+
+@mixin testimonial {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    background-color: $dark-gray;
+    width: 400px;
+    padding: 3em 2em 2em;
+    border-radius: 20px;
+    position: relative;
+    &::before {
+        content: url('./assets/icons/quotes.svg');
+        background: black;
+        display: inline-flex;
+        position: absolute;
+        width: 3em;
+        height: 3em;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        top: -1.3em;
+        left: 2em;
+    }
 }
 
 
