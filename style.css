@@ -158,6 +158,13 @@ h3 {
 .hero-section .decorations .hand-and-stamp * {
   position: absolute;
 }
+.hero-section .decorations .hand-and-stamp img {
+  transition: 0.3s;
+  cursor: pointer;
+}
+.hero-section .decorations .hand-and-stamp img:hover {
+  transform: scale(1.02);
+}
 .hero-section .decorations .hand-and-stamp #left-hand {
   height: 100%;
   left: 0;
