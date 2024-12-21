@@ -1,19 +1,21 @@
 
 .footer {
-    margin: 4em $master-margin 2em;
+    margin: 7em $master-margin 2em;
 
     .footer-wrapper {
         display: flex;
         gap: 1em;
-        padding: 2em;
+        padding: 2em 0;
 
         h2 {
-            font-size: 25px;
-            margin-bottom: 20px;
+            font-size: 19px;
+            font-weight: 700;
+            margin-bottom: 25px;
         }
         p {
             color: $text-gray;
             margin: 10px 0;
+            font-size: 14px;
         }
         a {
             display: block;
@@ -25,12 +27,24 @@
             flex: 1;
         }
 
+        .company-info .social-medias {
+            display: flex;
+            gap: 0.7em;
+            align-items: center;
+
+            a img {
+                height: 1em;
+                cursor: pointer;
+            }
+        }
+
         .newsletter form {
             display: flex;
-            margin: 10px 0;
+            margin-bottom: 1em;
+            max-width: 300px;
 
             .newsletter-email {
-                background-color: $gray;
+                background-color: #eeeeff;
                 flex: 1;
                 border: none;
                 padding: 1em;
@@ -40,14 +54,20 @@
                 border: none;
                 background-color: $cta-blue;
                 color: $white;
-                padding: 1em 2em;
+                padding: 1.3em 2em;
             }
+        }
+
+        @media screen and (max-width: 980px) {
+            flex-direction: column;
+            
         }
     }
 
 
     .copyright {
         text-align: center;
+        font-size: 14px;
         border-top: 1px solid $dark-gray; 
         padding-top: 2em;
     }

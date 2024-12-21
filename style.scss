@@ -2,7 +2,7 @@ $master-margin: 7%;
 $secondary-padding-x: 1.5rem;
 $secondary-padding-y: 1rem;
 
-$section-gap: 5rem;
+$section-gap: 7rem;
 $sub-section-gap: 2rem;
 
 $hover-scale: 1.02;
@@ -73,7 +73,8 @@ h3 {
     flex-direction: column;
     gap: 1em;
     background-color: $dark-gray;
-    width: 400px;
+    max-width: 500px;
+    width: 100%;
     padding: 3em $secondary-padding-x $secondary-padding-x;
     font-weight: bold;
     border-radius: 20px;
@@ -119,6 +120,10 @@ h3 {
             position: absolute;
         }
     }
+}
+
+@media screen and (max-width: 700px) {
+    $heading2-font-size: 30px;    
 }
 
 @import './header/header';

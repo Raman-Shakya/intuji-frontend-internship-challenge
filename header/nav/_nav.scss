@@ -20,6 +20,7 @@
     .main-nav-links {
         display: flex;
         gap: 1em;
+        font-weight: 400;
 
         span {
             cursor: pointer;
@@ -39,6 +40,10 @@
             img {
                 padding: 2px 5px;
             }
+        }
+
+        @media screen and (max-width: 850px) {
+            display: none;
         }
     }
 
@@ -61,6 +66,12 @@
 
             &:hover {
                 background-color: $cta-blue-selected;
+            }
+        }
+
+        @media screen and (max-width:450px) {
+            a {
+                padding: 0.5em;
             }
         }
     }

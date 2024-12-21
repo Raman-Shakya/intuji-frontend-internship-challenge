@@ -53,4 +53,34 @@
             height: 80%;
         }
     }
+
+
+    @media screen and (max-width: 1100px) {
+        flex-direction: column;
+        .statistic-label {
+            width: 100%;
+            text-align: center;
+            border: none;
+            padding: 1em;
+            margin: 0;
+
+            h2 {
+                width: 100%;
+            }
+        }
+        .statistics-container {
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        .statistic-label {
+            text-align: left;
+        }
+        .statistics-container {
+            flex-direction: column;
+            gap: 2em;
+        }        
+    }
 }
