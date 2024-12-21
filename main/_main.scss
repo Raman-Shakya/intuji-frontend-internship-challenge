@@ -6,3 +6,9 @@
 @import './blogs/blog';
 @import './faq/faq';
 @import './cta/cta';
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: $section-gap;
+}

@@ -1,14 +1,22 @@
 .services-section {
+    display: flex;
+    flex-direction: column;
+    gap: $section-gap;
+
     .services-heading {
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        margin: $master-margin;
+        gap: $sub-section-gap;
+        margin: 0 $master-margin;
 
         .service-introduction {
             width: 40%;
+            
             h2 {
-                font-size: 56px;
+                line-height: 1.1em;
+            }
+            p {
+                margin-top: 1.5em;
             }
         }
 
@@ -21,7 +29,7 @@
     .service-value-prop {
         display: flex;
         justify-content: space-between;
-        margin: $master-margin;
+        margin: 0 $master-margin;
         gap: 3em;
         
         .service-value {
@@ -30,53 +38,67 @@
             text-align: center;
             background-color: $white;
             min-height: 200px;
-            padding: 2em 4em;
+            padding: 2em $secondary-padding-x 3em;
             gap: 1em;
             border: 1px solid #DBE4E9;
             border-radius: 16px;
             position: relative;
+            @include hover-expand();
     
             span {
                 position: absolute;
                 font-size: 20px;
-                font-weight: bold;
+                font-weight: 800;
                 top: 10px;
                 left: 10px;
             }
             img {
                 width: 0 40px;
-                margin: 2em auto;
+                margin: 2em auto 1em;
+            }
+            p {
+                color: $text-gray;
             }
             h3 {
-                font-size: 25px;
+                font-size: 30px;
+                line-height: 34px;
             }
         }
     }
 
     .unique-selling-point {
         display: flex;
-        margin: $master-margin;
+        gap: 2em;
+        margin: 0 $master-margin;
         justify-content: space-between;
-        align-items: center;
 
         article {
-            width: 50%;
+            width: 45%;
+            margin-top: 1em;
         }
         .overline-header {
             color: $cta-blue;
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 1em;
         }
         .selling-point-header {
             font-size: 50px;
+            line-height: 60px;
         }
         .selling-point-description {
             color: $text-gray;
-            margin: 2em 0 1em;
+            margin: 2em 0 1.5em;
+        }
+        .description-2 {
+            margin-bottom: 5em;
         }
         .selling-point-features {
-            margin: 1em 0;
+            color: $text-gray;
+            margin: 2em 0;
         }
         .selling-point-features li{
-            margin: 0.5em 0;            
+            margin: 1em 0;            
             @include checkmark();
             &::before {
                 background: $yellow;
@@ -84,6 +106,47 @@
         }
         .service-testimonial {
             @include testimonial();
+        }
+
+        .unique-selling-point-img-container-1 {
+            position: relative;
+            
+            .content {
+                position: absolute;
+                top: 0;
+                left: -5%;
+                top: 9%;
+                @include hover-expand();
+            }
+
+            .triangular-dots {
+                position: absolute;
+                right: -4%;
+                top: -3%;
+            }
+        }
+
+        .unique-selling-point-img-container-2 {
+            position: relative;
+
+            .content-stat {
+                position: absolute;
+                left: -50%;
+                top: 45%;
+                @include hover-expand();
+            }
+            .content-hand {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                @include hover-expand();
+                transform-origin: bottom;
+            }
+            .slash-pattern {
+                position: absolute;
+                left: -10%;
+                top: 10%;
+            }
         }
     }
 }

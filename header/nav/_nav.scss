@@ -6,12 +6,15 @@
     width: 100%;
     padding: 2em $master-margin;
     justify-content: space-between;
+    align-items: center;
     // margin: 0 $master-margin;
 
     z-index: 10;
 
     h1 {
         cursor: pointer;
+        font-size: 1.3rem;
+        font-weight: 1000;
     }
 
     .main-nav-links {
@@ -32,6 +35,9 @@
             }
             &:hover::after {
                 width: 90%;
+            }
+            img {
+                padding: 2px 5px;
             }
         }
     }

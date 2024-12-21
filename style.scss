@@ -1,5 +1,17 @@
-$master-margin: calc(7%);
+$master-margin: 7%;
+$secondary-padding-x: 1.5rem;
+$secondary-padding-y: 1rem;
+
+$section-gap: 5rem;
+$sub-section-gap: 2rem;
+
+$hover-scale: 1.02;
 $animation-time: 0.3s;
+
+$heading1-font-size: 60px;
+$heading2-font-size: 53px;
+$heading3-font-size: 18px;
+
 $cta-blue: #3734A9;
 $cta-blue-selected: #4f4bf5;
 $cta-green: #22D497;
@@ -7,11 +19,13 @@ $white: #FFFFFF;
 $black: #000000;
 $text-gray: #64607D;
 $gray: #F5F6F8;
-$dark-gray: #C4C4C4;
+$dark-gray: #eaebee;
 $bg-white: #FAFBFF;
 $yellow: #FDBC64;
 $torquoise: #C9E7F2;
 $orange: #FF7F5C;
+$orange-focus: #ff945c;
+$light-blue: #DBF1FA;
 
 * {
     font-family: "Manrope", serif;
@@ -25,6 +39,18 @@ $orange: #FF7F5C;
 
 body {
     background-color: $bg-white;
+}
+
+h1 {
+    font-size: $heading1-font-size;
+    font-weight: 1000;
+}
+h2 {
+    font-size: $heading2-font-size;
+    font-weight: 1000;
+}
+h3 {
+    font-size: $heading3-font-size;
 }
 
 @mixin checkmark {
@@ -48,9 +74,12 @@ body {
     gap: 1em;
     background-color: $dark-gray;
     width: 400px;
-    padding: 3em 2em 2em;
+    padding: 3em $secondary-padding-x $secondary-padding-x;
+    font-weight: bold;
     border-radius: 20px;
     position: relative;
+    @include hover-expand();
+
     &::before {
         content: url('./assets/icons/quotes.svg');
         background: black;
@@ -62,11 +91,36 @@ body {
         align-items: center;
         border-radius: 50%;
         top: -1.3em;
-        left: 2em;
+        left: $secondary-padding-x;
     }
 }
 
+@mixin hover-expand {
+    transition: $animation-time;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.02);
+    }
+}
+
+@mixin doodle-setup {
+    position: relative;
+
+    .doodle {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -10;
+
+        img {
+            position: absolute;
+        }
+    }
+}
 
 @import './header/header';
 @import './main/main';
-@import './footer/footer'
+@import './footer/footer';

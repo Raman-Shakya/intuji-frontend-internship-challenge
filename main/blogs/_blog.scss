@@ -1,9 +1,6 @@
 
 .recent-blog-section {
     margin: 0 $master-margin;
-    h2 {
-        font-size: 50px;
-    }
 
     .blog {
         display: flex;
@@ -11,23 +8,24 @@
         justify-content: space-between;
         border: 1px solid $gray;
         border-radius: 10px;
-        margin: 0.75em 0;
         position: relative;
         overflow: hidden;
+        background-color: $white;
+        @include hover-expand();
 
         &::before {
             content: 'BEST PRACTICES';
             position: absolute;
-            left: 2rem;
+            left: $secondary-padding-x;
             top: 2rem;
         }
 
         h3 {
             font-size: 25px;
-            margin: 4rem 2rem;
+            margin: 4rem $secondary-padding-x;
         }
         p {
-            margin-left: 3em;
+            margin-left: $secondary-padding-x;
         }
         img {
             // height: 100%;
@@ -35,8 +33,11 @@
         }
     }
 
-    .featured-blog img {
-        height: 100%;
+    .featured-blog {
+        margin: $sub-section-gap 0;
+        img {
+            height: 100%;
+        }
     }
 
     .more-blog {

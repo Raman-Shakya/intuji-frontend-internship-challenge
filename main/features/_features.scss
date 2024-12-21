@@ -1,11 +1,10 @@
 
 .features-section {
-    background: $torquoise;
-    padding: 3em $master-margin;
-    
-    h2 {
-        font-size: 50px;
-        margin-bottom: 10px;
+    padding: $section-gap $master-margin;
+    @include doodle-setup();
+
+    > p {
+        margin: 1.2em 0 $sub-section-gap;
     }
 
     .feature-wrapper {
@@ -18,12 +17,13 @@
         }
 
         .feature-card {
-            background: $white;
-            padding: 2.5em 1.5em;
+            background-color: $white;
+            padding: 3em $secondary-padding-x;
             border-radius: 5px;
             display: flex;
             gap: 1em;
             flex-direction: column;
+            @include hover-expand();
 
             img {
                 width: 50px;
@@ -36,5 +36,14 @@
             justify-content: space-between;
             gap: 1.5em;
         }
-    }    
+    }
+
+    .doodle {
+        background-color: $torquoise;
+
+        .hyphen-pattern {
+            left: 0;
+            bottom: 10%;
+        }
+    }
 }

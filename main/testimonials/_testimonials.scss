@@ -1,15 +1,16 @@
 
 .testimonial-section {
-    margin: 50px $master-margin;
+    margin: 0 $master-margin;
+    position: relative;
 
-    h2 {
-        font-size: 50px;
+    > p {
+        margin: $sub-section-gap 0;
     }
 
     .testimonial-wrapper {
         display: flex;
         gap: 2em;
-        margin: 50px 0;
+        margin: 50px 0 0;
 
         .testimonial-card {
             display: flex;
@@ -21,7 +22,7 @@
             border: 1px solid $dark-gray;
 
             .testimonial-script {
-                font-size: 1.1em;
+                font-size: 18px;
                 display: flex;
                 flex-direction: column;
                 gap: 1em;
@@ -31,6 +32,23 @@
                 width: 150px;
                 object-fit: cover;
             }
+        }
+    }
+
+    .doodle {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -10;
+
+        img {
+            position: absolute;
+        }
+
+        .orange-wave {
+            right: 10%;
         }
     }
 }
