@@ -57,11 +57,13 @@
 
     @media screen and (max-width: 1100px) {
         flex-direction: column;
+        padding: $master-margin;
+
         .statistic-label {
             width: 100%;
             text-align: center;
             border: none;
-            padding: 1em;
+            padding: 1em 0;
             margin: 0;
 
             h2 {
@@ -71,16 +73,24 @@
         .statistics-container {
             margin: 0;
             padding: 0;
+            width: auto;
         }
     }
 
     @media screen and (max-width: 800px) {
         .statistic-label {
             text-align: left;
+
         }
         .statistics-container {
             flex-direction: column;
             gap: 2em;
+            h3 {
+                font-size: 50px !important;
+            }
+            p {
+                font-size: 18px !important;
+            }
         }        
     }
 }

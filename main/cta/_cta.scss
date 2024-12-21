@@ -8,10 +8,7 @@
     position: relative;
     overflow: hidden;
     @include doodle-setup();
-    
-    h2 {
-        font-size: 50px;
-    }
+
     button {
         background: $orange;
         color: $white;

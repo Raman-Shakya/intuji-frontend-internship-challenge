@@ -11,4 +11,8 @@ main {
     display: flex;
     flex-direction: column;
     gap: $section-gap;
+
+    @media screen and (max-width: 550px) {
+        gap: 5em;
+    }
 }

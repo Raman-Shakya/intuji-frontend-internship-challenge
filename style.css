@@ -25,6 +25,11 @@ h3 {
   font-size: 18px;
 }
 
+@media screen and (max-width: 700px) {
+  h2 {
+    font-size: 35px;
+  }
+}
 .hero-section {
   height: 85vh;
   padding: 0 7%;
@@ -131,7 +136,7 @@ h3 {
 }
 @media screen and (max-width: 540px) {
   .hero-section .hero-wrapper h1 {
-    font-size: 40px;
+    font-size: 36px;
   }
   .hero-section .hero-wrapper .call-to-action-wrapper {
     gap: 1em;
@@ -261,6 +266,7 @@ h3 {
 .main-nav-section .main-nav-auth a {
   text-decoration: none;
   padding: 1em 2em;
+  display: inline-block;
 }
 .main-nav-section .main-nav-auth .sign-in-button {
   color: #000000;
@@ -292,10 +298,13 @@ h3 {
 }
 .companies-section .companies-list {
   display: flex;
-  justify-content: center;
   overflow: auto;
   gap: 2em;
-  margin: 1.2em 0 0;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 100%;
+  margin: 1.2em auto 0;
+  padding: 1em;
 }
 .companies-section p {
   font-size: 18px;
@@ -553,6 +562,17 @@ h3 {
     width: 100%;
   }
 }
+@media screen and (max-width: 550px) {
+  .services-section .unique-selling-point .selling-point-header {
+    font-size: 27px;
+    line-height: 30px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .services-section {
+    gap: 3em;
+  }
+}
 
 .features-section {
   padding: 7rem 7%;
@@ -664,16 +684,31 @@ h3 {
   left: 1.5rem;
 }
 .testimonial-section .testimonial-wrapper .testimonial-card .testimonial-script {
+  flex: 2;
   font-size: 18px;
   display: flex;
   flex-direction: column;
   gap: 1em;
 }
-.testimonial-section .testimonial-wrapper .testimonial-card img {
+.testimonial-section .testimonial-wrapper .testimonial-card .testimonial-script p {
+  max-height: 200px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 5;
+}
+.testimonial-section .testimonial-wrapper .testimonial-card .testimonial-img {
+  flex: 1;
+}
+.testimonial-section .testimonial-wrapper .testimonial-card .testimonial-img img {
   height: 100%;
-  width: 150px;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media screen and (max-width: 500px) {
+  .testimonial-section .testimonial-wrapper .testimonial-card p {
+    font-size: 0.7em;
+  }
 }
 .testimonial-section .doodle {
   position: absolute;
@@ -755,12 +790,13 @@ h3 {
 @media screen and (max-width: 1100px) {
   .statistic-section {
     flex-direction: column;
+    padding: 7%;
   }
   .statistic-section .statistic-label {
     width: 100%;
     text-align: center;
     border: none;
-    padding: 1em;
+    padding: 1em 0;
     margin: 0;
   }
   .statistic-section .statistic-label h2 {
@@ -769,6 +805,7 @@ h3 {
   .statistic-section .statistics-container {
     margin: 0;
     padding: 0;
+    width: auto;
   }
 }
 @media screen and (max-width: 800px) {
@@ -778,6 +815,12 @@ h3 {
   .statistic-section .statistics-container {
     flex-direction: column;
     gap: 2em;
+  }
+  .statistic-section .statistics-container h3 {
+    font-size: 50px !important;
+  }
+  .statistic-section .statistics-container p {
+    font-size: 18px !important;
   }
 }
 
@@ -958,9 +1001,6 @@ h3 {
 .cta-section .doodle img {
   position: absolute;
 }
-.cta-section h2 {
-  font-size: 50px;
-}
 .cta-section button {
   background: #FF7F5C;
   color: #FFFFFF;
@@ -1005,6 +1045,11 @@ main {
   display: flex;
   flex-direction: column;
   gap: 7rem;
+}
+@media screen and (max-width: 550px) {
+  main {
+    gap: 5em;
+  }
 }
 
 .footer {

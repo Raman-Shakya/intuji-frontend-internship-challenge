@@ -23,16 +23,33 @@
             background-color: $white;
             border: 1px solid $dark-gray;
 
+            
             .testimonial-script {
+                flex: 2;
                 font-size: 18px;
                 display: flex;
                 flex-direction: column;
                 gap: 1em;
+                
+                p {
+                    max-height: 200px;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    -webkit-line-clamp: 5;
+                }
             }
-            img {
-                height: 100%;
-                width: 150px;
-                object-fit: cover;
+            .testimonial-img {
+                flex: 1;
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            @media screen and (max-width: 500px) {
+                p {
+                    font-size: 0.7em;
+                }
             }
         }
     }

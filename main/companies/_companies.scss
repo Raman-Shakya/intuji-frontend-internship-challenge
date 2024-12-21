@@ -8,10 +8,12 @@
 
     .companies-list {
         display: flex;
-        justify-content: center;
         overflow: auto;
         gap: 2em;
-        margin: 1.2em 0 0;
+        width: fit-content;
+        max-width: 100%;
+        margin: 1.2em auto 0;
+        padding: 1em;
     }
 
     p {
