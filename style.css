@@ -1029,6 +1029,10 @@ main {
   display: block;
   margin: 10px 0;
   color: #64607D;
+  cursor: pointer;
+}
+.footer .footer-wrapper a:hover {
+  font-weight: 500;
 }
 .footer .footer-wrapper article {
   flex: 1;
@@ -1052,6 +1056,7 @@ main {
   flex: 1;
   border: none;
   padding: 1em;
+  outline: none;
 }
 .footer .footer-wrapper .newsletter form .newsletter-subscribe {
   border: none;

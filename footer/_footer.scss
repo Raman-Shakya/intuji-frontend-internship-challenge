@@ -21,6 +21,11 @@
             display: block;
             margin: 10px 0;
             color: $text-gray;
+            cursor: pointer;
+
+            &:hover {
+                font-weight: 500;
+            }
         }
 
         article {
@@ -48,6 +53,7 @@
                 flex: 1;
                 border: none;
                 padding: 1em;
+                outline: none;
             }
 
             .newsletter-subscribe {
