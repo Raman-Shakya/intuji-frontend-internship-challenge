@@ -4,9 +4,11 @@
     display: flex;
     // width: calc(100% - 2*$master-margin);
     width: 100%;
-    padding: 2em $master-margin;
+    padding: 0.7em $master-margin;
+    top: 1em;
     justify-content: space-between;
     align-items: center;
+    transition: $animation-time;
     // margin: 0 $master-margin;
 
     z-index: 10;

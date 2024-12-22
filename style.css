@@ -73,39 +73,21 @@ h3 {
   display: flex;
   align-items: center;
   gap: 0.5em;
+  width: 12em;
   position: relative;
   cursor: pointer;
 }
-.hero-section .hero-wrapper .call-to-action-wrapper .tutorial-button::after {
-  content: "";
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.3s;
-  position: absolute;
-  left: 0;
-  width: 0;
-  height: 3em;
-  width: 3em;
-  background-color: #22D497;
-  white-space: nowrap;
-  overflow: hidden;
-  color: #FFFFFF;
-  opacity: 0;
-}
-.hero-section .hero-wrapper .call-to-action-wrapper .tutorial-button:hover::after {
-  content: "See How it Works";
-  width: 100%;
-  opacity: 1;
-  border-radius: 20px;
-}
 .hero-section .hero-wrapper .call-to-action-wrapper .tutorial-button span {
+  position: absolute;
+  display: block;
   width: 3em;
   height: 3em;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
+  border-radius: 5em;
+  overflow: hidden;
+  transition: width 0.3s;
   background-color: #22D497;
 }
 .hero-section .hero-wrapper .call-to-action-wrapper .tutorial-button span img {
@@ -113,6 +95,19 @@ h3 {
 }
 .hero-section .hero-wrapper .call-to-action-wrapper .tutorial-button a {
   color: #3734A9;
+  text-wrap: nowrap;
+  margin-left: 3.5em;
+}
+.hero-section .hero-wrapper .call-to-action-wrapper .tutorial-button:hover span {
+  width: 100%;
+  position: absolute;
+  text-wrap: nowrap;
+  height: 3em;
+}
+.hero-section .hero-wrapper .call-to-action-wrapper .tutorial-button:hover span::before {
+  content: "See How it Works";
+  color: #FFFFFF;
+  padding-right: 0.7em;
 }
 .hero-section .hero-wrapper .features-list {
   display: flex;
@@ -169,16 +164,23 @@ h3 {
   height: 100%;
   left: 0;
   bottom: -15%;
+  animation: slide-in-bottom-animation 1s;
 }
 .hero-section .decorations .hand-and-stamp #right-hand {
   height: 85%;
   left: 12%;
   bottom: -18%;
+  animation: slide-in-bottom-animation 1.3s;
 }
 .hero-section .decorations .hand-and-stamp #stamp-border {
   height: 50%;
   top: 6%;
   left: 15%;
+  animation: rotate-animation 2.3s;
+  transition: 1s;
+}
+.hero-section .decorations .hand-and-stamp #stamp-border:hover {
+  transform: rotate(180deg);
 }
 .hero-section .decorations .hand-and-stamp #stamp-cover {
   height: 15%;
@@ -216,25 +218,53 @@ h3 {
   height: 50%;
   right: 0;
   bottom: -24%;
+  animation: slide-in-left-animation 2s;
 }
 .hero-section .doodle-container .doodle-2 {
   height: 17%;
   left: 0;
   bottom: 10%;
+  animation: slide-in-right-animation 2s;
 }
 .hero-section .doodle-container .doodle-3 {
   height: 17%;
   right: 0;
   top: 15%;
+  animation: slide-in-left-animation 2s;
 }
 
+@keyframes slide-in-bottom-animation {
+  0% {
+    transform: translate(0, 100%);
+  }
+}
+@keyframes slide-in-right-animation {
+  0% {
+    transform: translate(-100%, 0);
+  }
+}
+@keyframes slide-in-left-animation {
+  0% {
+    transform: translate(100%, 0);
+  }
+}
+@keyframes rotate-animation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .main-nav-section {
   position: fixed;
   display: flex;
   width: 100%;
-  padding: 2em 7%;
+  padding: 0.7em 7%;
+  top: 1em;
   justify-content: space-between;
   align-items: center;
+  transition: 0.3s;
   z-index: 10;
 }
 .main-nav-section h1 {
@@ -312,6 +342,13 @@ h3 {
   max-width: 100%;
   margin: 1.2em auto 0;
   padding: 1em;
+}
+.companies-section .companies-list img {
+  transition: 0.3s;
+  cursor: pointer;
+}
+.companies-section .companies-list img:hover {
+  transform: scale(1.02);
 }
 .companies-section p {
   font-size: 18px;

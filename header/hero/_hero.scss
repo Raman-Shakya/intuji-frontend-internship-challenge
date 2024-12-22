@@ -46,48 +46,69 @@
                 display: flex;
                 align-items: center;
                 gap: 0.5em;
+                width: 12em;
                 position: relative;
                 cursor: pointer;
 
-                &::after {
-                    content: '';
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    transition: $animation-time;
-                    position: absolute;
-                    left: 0;
-                    width: 0;
-                    height: 3em;
-                    width: 3em;
-                    background-color: $cta-green;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    color: $white;
-                    opacity: 0;
-                }
+                // &::after {
+                //     content: '';
+                //     display: flex;
+                //     align-items: center;
+                //     justify-content: center;
+                //     transition: $animation-time;
+                //     position: absolute;
+                //     left: 0;
+                //     width: 0;
+                //     height: 3em;
+                //     width: 3em;
+                //     background-color: $cta-green;
+                //     white-space: nowrap;
+                //     overflow: hidden;
+                //     color: $white;
+                //     opacity: 0;
+                // }
 
-                &:hover::after {
-                    content: "See How it Works";
-                    width: 100%;
-                    opacity: 1;
-                    border-radius: 20px;
-                }
+                // &:hover::after {
+                //     content: "See How it Works";
+                //     width: 100%;
+                //     opacity: 1;
+                //     border-radius: 20px;
+                // }
 
                 span {
+                    position: absolute;
+                    display: block;
                     width: 3em;
                     height: 3em;
                     display: inline-flex;
                     justify-content: center;
                     align-items: center;
-                    border-radius: 50%;
+                    border-radius: 5em;
+                    overflow: hidden;
+                    transition: width $animation-time;
                     background-color: $cta-green;
                     
                     img { height: 50%; }
-
                 }
                 a {
                     color: $cta-blue;
+                    text-wrap: nowrap;
+                    margin-left: 3.5em;
+                }
+
+                &:hover {
+                    span {
+                        width: 100%;
+                        position: absolute;
+                        text-wrap: nowrap;
+                        height: 3em;
+
+                        &::before {
+                            content: 'See How it Works';
+                            color: $white;
+                            padding-right: 0.7em;
+                        }
+                    }
                 }
             }
         }
@@ -135,16 +156,23 @@
                 height: 100%;
                 left: 0;
                 bottom: -15%;
+                animation: slide-in-bottom-animation 1s;
             }
             #right-hand {
                 height: 85%;
                 left: 12%;
                 bottom: -18%;
+                animation: slide-in-bottom-animation 1.3s;
             }
             #stamp-border {
                 height: 50%;
                 top: 6%;
                 left: 15%;
+                animation: rotate-animation 2.3s;
+                transition: 1s;
+                &:hover {
+                    transform: rotate(180deg);
+                }
             }
             #stamp-cover {
                 height: 15%;
@@ -184,17 +212,47 @@
             height: 50%;
             right: 0;
             bottom: -24%;
+            animation: slide-in-left-animation 2s;
         }
         .doodle-2 {
             height: 17%;
             left: 0;
             bottom: 10%;
+            animation: slide-in-right-animation 2s;
         }
         .doodle-3 {
             height: 17%;
             right: 0;
             top: 15%;
+            animation: slide-in-left-animation 2s;
         }
     }
 
+}
+
+@keyframes slide-in-bottom-animation {
+    0% {
+        transform: translate(0, 100%);
+    }
+}
+
+@keyframes slide-in-right-animation {
+    0% {
+        transform: translate(-100%, 0);
+    }
+}
+
+@keyframes slide-in-left-animation {
+    0% {
+        transform: translate(100%, 0);
+    }
+}
+
+@keyframes rotate-animation {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
